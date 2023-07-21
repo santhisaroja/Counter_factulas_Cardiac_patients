@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Page</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            margin: 0 auto;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+        }
+        
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #eee;
+            font-weight: bold;
+        }
+        <br>
+
+        {html_tables|safe}
+        <br><br>
+        { styled|safe }
+    </style>
+</head>
+
+
+
+<body>
+    <br>
+    <h2>User Input</h2>
+    {{html_tables|safe}}
+    <br><br>
+
+   
+   <button id="toggleButton">Show Counter Factuals</button>
+
+<div id="output" style="display:none">
+    <h2>Counter Factuals</h2>
+
+    {% if r != 0 %}
+  
+        {{ styled|safe }}
+ 
+
+    {% else %}
+        <p>No change is needed.</p>
+    {% endif %}
+
+    
+    
+</div>
+
+<script>
+    var toggleButton = document.getElementById("toggleButton");
+    var outputDiv = document.getElementById("output");
+
+    toggleButton.addEventListener("click", function() {
+        if (outputDiv.style.display === "none") {
+            outputDiv.style.display = "block";
+        } else {
+            outputDiv.style.display = "none";
+        }
+    });
+</script>
+
+</body>
+</html>
+
+

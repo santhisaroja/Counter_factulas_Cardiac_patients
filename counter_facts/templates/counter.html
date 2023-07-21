@@ -1,0 +1,89 @@
+
+
+
+    <form action="{% url 'result' %}" method="POST" >
+    {% csrf_token %}
+
+   <p><label for="age">Age Groupings:</label>
+        <select name="age" id="age" selected="selected">
+            <option value="1.0">1</option>
+            <option value="2.0">2</option>
+            <option value="3.0">3</option>
+            <option value="4.0">4</option>
+            <option value="5.0">5</option>
+            <option value="6.0">6</option>
+            <option value="7.0">7</option>
+        </select></p>
+        <br>
+        <p><label for="bmi">BMI Groupings</label>
+        <select name="bmi" id="bmi" selected="selected">
+            <option value="0.0">0</option>
+            <option value="1.0">1</option>
+            <option value="2.0">2</option>
+            <option value="3.0">3</option>
+            <option value="4.0">4</option>
+        </select></p>
+        <br>
+        <p><label for="diabetes">FH type 2 diabetes mellitus:</label>
+        <select name="diabetes" id="diabetes" selected="selected">
+            <option value="1.0">Diabetes</option>
+            <option value="0.0">Non Diabetes</option>
+        </select></p>
+        <br>
+        <p><label for="med_conditions">'Known Medical Conditions:</label>
+        <select name="med_conditions" id="med_conditions" selected="selected">
+            <option value="1.0">1</option>
+            <option value="2.0">2</option>
+            <option value="3.0">3</option>
+            <option value="4.0">4</option>
+        </select></p>
+        <br>
+        <p><label for="hypertension">Hypertension:</label>
+        <select name="hypertension" id="hypertension" selected="selected">
+            <option value="1.0">Yes</option>
+            <option value="0.0">No</option>
+        </select></p>
+        <br>
+        <p><label for="hyperthyroidism">Hyperthyroidism:</label>
+        <select name="hyperthyroidism" id="hyperthyroidism" selected="selected">
+            <option value="1.0">Yes</option>
+            <option value="0.0">No</option>
+        </select></p>
+        <br>
+    
+        <p><label for="cholesterol">Total Cholesterol (mg/dL):</label>
+        
+        <input type="number" step="0.001" id="cholesterol" name='cholesterol' min='12' max='354' required><br><br>
+        </select></p>
+        <br>
+        <p><label for="ldl">LDL (mg/dL):</label>
+        
+            <input type="number" step="0.00000001" id="ldl" name='ldl' min='12' max='153' required><br><br>
+        </select></p>
+        <br>
+        <p><label for="triglycerides">Triglycerides (mg/dL):</label>
+        
+            <input type="number" step="0.001" id="triglycerides" name='triglycerides' min='12' max='579' required><br><br>
+        </select></p>
+        <br>
+        <p><label for="creatinine">Creatinine (mg/dL):</label>
+        
+            <input type="number" step="0.001" id="creatinine" name='creatinine' min='0.5' max='54' required><br><br>
+        </select></p>
+        <br>
+        <p><label for="tsh">TSH (mg/dL):</label>
+        
+            <input type="number" step="0.001" id="tsh" name='tsh' min='0.42' max='102' required><br><br>
+        </select></p>
+
+       <br>
+        <div class="row" align="center">
+            <button type="submit" >Get Prediction</button>
+        </div>
+        <br><br>
+    </form>
+
+
+
+
+
